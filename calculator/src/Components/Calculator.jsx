@@ -22,10 +22,11 @@ const Calculator = () =>{
 
 
     const handleClick = (value) =>{
-        //  if (resultflag) {
-        //      setinputvalue(inputvalue);
-        //     setresultflag(false);
-        //    }
+       
+        if(resultflag){
+            setresultflag(false)
+            
+        }
    
         setinputvalue((prev)=>{
             console.log("prev",prev)
