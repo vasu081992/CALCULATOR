@@ -7,7 +7,7 @@ const Button = ({name,onClick,value})=>{
   
 return(
     <>
-    <button className={styles.button} onClick={()=>onClick(value)}>{name}</button>
+    <button type="button" className={styles.button} onClick={()=>onClick(value)}>{name}</button>
     </>
 )
 }
@@ -22,18 +22,17 @@ const Calculator = () =>{
 
 
     const handleClick = (value) =>{
-        if (resultflag) {
-            setinputvalue(inputvalue+value);
-            setresultflag(false);
-          }
-else{
-        setinputvalue(inputvalue + value)
-    }
+        // if (resultflag) {
+        //     setinputvalue(inputvalue+value);
+        //     setresultflag(false);
+        //   }
+        setinputvalue((prev)=>prev+value)
+    
     }
     const handleExpression =() =>{
 
         setresultflag(true)
-         setinputvalue(eval(inputvalue).toString())
+        //  setinputvalue(eval(inputvalue).toString())
 
     }
 
