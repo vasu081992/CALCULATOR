@@ -18,14 +18,23 @@ const Calculator = () =>{
     const[resultflag,setresultflag]=useState(false)
 
     console.log("inputvalue",inputvalue)
+    console.log("type",typeof inputvalue)
+
 
     const handleClick = (value) =>{
+        if (resultflag) {
+            setinputvalue(inputvalue+value);
+            setresultflag(false);
+          }
+else{
         setinputvalue(inputvalue + value)
     }
-
+    }
     const handleExpression =() =>{
+
         setresultflag(true)
-        // setinputvalue(eval(inputvalue))
+         setinputvalue(eval(inputvalue).toString())
+
     }
 
     const handleClear = () =>{
@@ -37,7 +46,7 @@ const Calculator = () =>{
 <>
 <h1>React Calculator</h1>
 
-<input className={styles.input} value={inputvalue}></input>
+<input type="text" className={styles.input} value={inputvalue}></input>
 
 
 {resultflag && inputvalue ? 
