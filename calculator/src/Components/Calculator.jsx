@@ -90,7 +90,7 @@ const Calculator = () =>{
 
 <Button name={1} onClick={handleClick} value={"1"}/>
 <Button name={2} onClick={handleClick} value={"2"}/>
-<Button name={3} onClick={handleClick} value={"6"}/>
+<Button name={3} onClick={handleClick} value={"3"}/>
 <Button name={"*"} onClick={handleClick} value={"*"}/>
 
 </div>
